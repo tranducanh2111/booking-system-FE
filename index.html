@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance Notices</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Advance Notices" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/popup.css">
+	<link rel="stylesheet" href="assets/css/user.css">
+    <script>
+        if (window.top != window.self) {
+            window.top.location.replace(window.self.location.href);
+        }
+    </script>
+</head>
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
+    <script>
+        var defaultThemeMode = "light";
+        var themeMode;
+        if (document.documentElement) {
+            if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+                themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+            } else {
+                if (localStorage.getItem("data-bs-theme") !== null) {
+                    themeMode = localStorage.getItem("data-bs-theme");
+                } else {
+                    themeMode = defaultThemeMode;
+                }
+            }
+            if (themeMode === "system") {
+                themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            document.documentElement.setAttribute("data-bs-theme", themeMode);
+        }
+    </script>
+    <div class="d-flex flex-column flex-root">
+        <header class="w-100 bg-white sticky-top">
+			<div class="max-w-body w-100 mx-auto d-flex p-4 flex-row justify-content-between align-items-center">
+				<section class="d-flex align-items-center gap-2">
+					<figure class="w-auto h-100 max-w-sm-150 max-w-lg-310 mb-0">
+						<a href="index.html">
+							<img src="/assets/media/logos/logo.png" alt="Logo" class="object-cover">
+						</a>
+					</figure>
+					<div class="ms-3 d-none d-md-inline">
+						<h3 class="text-h3 text-primary mb-2">Cider House ICT</h3>
+						<p class="text-body mb-0">9/899 Wellington Road ROWVILLE 3178 VIC</p>
+					</div>
+				</section>
+				<div class="w-auto d-flex flex-row flex-md-column align-items-center align-items-md-start gap-2">
+					<a href="tel:0466223888" class="link-primary">
+						<div class="d-flex align-items-center gap-2">
+							<object data="/assets/media/svg/personal/phone.svg" type="image/svg+xml" width="24" height="24"></object>
+							<p class="d-none d-md-inline w-auto mb-0">0466223888</p>
+						</div>
+					</a>
+					<a href="mailto:at@ciderhouse.com.au" class="link-primary">
+						<div class="d-flex align-items-center gap-2">
+							<object data="/assets/media/svg/personal/email.svg" type="image/svg+xml" width="24" height="24"></object>
+							<p class="d-none d-md-inline w-auto mb-0">at@ciderhouse.com.au</p>
+						</div>
+					</a>
+				</div>
+			</div>
+        </header>
+        <main class="max-w-body page-height mx-auto w-100 d-flex flex-column justify-content-start align-items-center gap-20 px-4 py-10">
+            <!-- Overlay and Pop-up HTML -->
+			<div id="overlay" class="overlay">
+				<div class="popup rounded-3">
+					<h3 class="text-center text-h3 text-primary mb-10">Are you our current client?</h3>
+					<div class="d-flex flex-wrap flex-column flex-md-row justify-content-between gap-5">
+						<!-- Sign In -->
+						<button type="button" class="w-100  text-body fw-bolder text-white bg-user-primary rounded-3 px-5 py-2 border-1 border-primary">Sign In</button>
+						<button type="button" class="w-100 text-body fw-bolder text-primary rounded-3 border-primary px-5 py-2">Continue as Guest</button>
+						<button type="button" class="w-100 text-body fw-bolder text-white bg-red border-red rounded-3 px-5 py-2">Cancel</button>
+					</div>
+					<!-- Add form or additional content here -->
+				</div>
+			</div>
+			<!-- Button Container -->
+			<section class="row w-100 gap-3">
+                <button type="button" class="col d-flex flex-column justify-content-center align-items-center p-3 bg-primary border border-1 border-primary rounded-3">
+                    <object data="/assets/media/svg/personal/create-appointment.svg" type="image/svg+xml" width="48" height="48"></object>
+                    <p class="text-body text-white ms-2 ms-md-0 mb-0">Make Appointment</p>
+                </button>
+                <a href="cancel.html" class="col p-0">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-3 border border-1 border-primary rounded-3">
+                        <object data="/assets/media/svg/personal/cancel-appointment.svg" type="image/svg+xml" width="48" height="48"></object>
+                        <p class="text-body text-primary ms-2 ms-md-0 mb-0">Cancel Appointment</p>
+                    </div>
+                </a>
+            </section>
+            <section class="overflow-auto-y">
+                <p class="text-body">Dear Valued Clients,
+                    <br><br>
+                    Thank you for choosing our Vet Clinic for your pet's healthcare needs! Before booking your appointment, please take a moment to review our policies to ensure a smooth and enjoyable visit. To provide the best care possible, we kindly ask that you bring your pet's medical records and arrive 10 minutes early. Cancellations or rescheduling should be done at least 24 hours in advance to avoid a late fee. If you have any questions or need assistance, our friendly staff is here to help. Feel free to contact us at (555) 123-4567 or email us at info@vetclinic.com. We look forward to seeing you and your furry friends soon!
+                    <br><br>
+                    Warm regards,
+                    <br><br>The Vet Clinic Team
+                </p>
+				<p class="text-body">Dear Valued Clients,
+                    <br><br>
+                    Thank you for choosing our Vet Clinic for your pet's healthcare needs! Before booking your appointment, please take a moment to review our policies to ensure a smooth and enjoyable visit. To provide the best care possible, we kindly ask that you bring your pet's medical records and arrive 10 minutes early. Cancellations or rescheduling should be done at least 24 hours in advance to avoid a late fee. If you have any questions or need assistance, our friendly staff is here to help. Feel free to contact us at (555) 123-4567 or email us at info@vetclinic.com. We look forward to seeing you and your furry friends soon!
+                    <br><br>
+                    Warm regards,
+                    <br><br>The Vet Clinic Team
+                </p>
+				<p class="text-body">Dear Valued Clients,
+                    <br><br>
+                    Thank you for choosing our Vet Clinic for your pet's healthcare needs! Before booking your appointment, please take a moment to review our policies to ensure a smooth and enjoyable visit. To provide the best care possible, we kindly ask that you bring your pet's medical records and arrive 10 minutes early. Cancellations or rescheduling should be done at least 24 hours in advance to avoid a late fee. If you have any questions or need assistance, our friendly staff is here to help. Feel free to contact us at (555) 123-4567 or email us at info@vetclinic.com. We look forward to seeing you and your furry friends soon!
+                    <br><br>
+                    Warm regards,
+                    <br><br>The Vet Clinic Team
+                </p>
+            </section>
+        </main>
+        <footer class="sticky-bottom w-100 bg-white">
+            <section class="max-w-body w-100 mx-auto d-flex flex-column flex-sm-row justify-content-between align-items-center px-4 p-4 gap-3">
+                <div>
+                    <ul class="list-unstyled list-inline mb-0">
+                        <li class="list-inline-item"><a href="https://ciderhouse.com.au/" target="_blank"><object data="/assets/media/svg/personal/website-url.svg" type="image/svg+xml" width="32" height="32"></object></a></li>
+                        <li class="list-inline-item"><a href="https://ciderhouse.com.au/" target="_blank"><object data="/assets/media/svg/personal/facebook.svg" type="image/svg+xml" width="32" height="32"></object></a></li>
+                        <li class="list-inline-item"><a href="https://ciderhouse.com.au/" target="_blank"><object data="/assets/media/svg/personal/twitter.svg" type="image/svg+xml" width="32" height="32"></object></a></li>
+                        <li class="list-inline-item"><a href="https://ciderhouse.com.au/" target="_blank"><object data="/assets/media/svg/personal/instagram.svg" type="image/svg+xml" width="32" height="32"></object></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-unstyled list-inline mb-0">
+                        <li class="list-inline-item"><a href="" class="text-primary fw-bolder link-primary">Advanced Notice</a></li>
+                        <li class="list-inline-item"><a href="" class="fw-bolder link-primary">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="" class="fw-bolder link-primary">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <!-- JavaScript -->
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <script src="assets/js/custom/popup.js"></script>
+</body>
+</html>
