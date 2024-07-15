@@ -16,7 +16,7 @@ $info-active-dark:				#107EFF !default;
 $info-light-dark: 				#172331 !default;
 $info-clarity-dark: 				rgba(#006AE6, 0.2) !default;
 
-$primary: 							#7239EA !default; 
+$primary: 							#A3D063 !default; 
 $primary-active: 					#5014D0 !default;
 $primary-light: 					#F8F5FF !default;
 $primary-clarity: 					rgba(#7239EA, 0.2) !default;
@@ -27,6 +27,17 @@ $primary-active-dark: 					#9E63FF !default;
 $primary-light-dark: 					#272134 !default;
 $primary-clarity-dark: 				rgba(#883FFF, 0.2) !default;
 
+// Custom spacer
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
 
 // Card
 $card-border-radius:                				0.95rem;
