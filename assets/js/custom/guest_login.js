@@ -15,7 +15,7 @@ function hidePatientDetails() {
 document.addEventListener('DOMContentLoaded', function() {
     // Check if 'guest=true' is in the URL query string
     var urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('guest') && urlParams.get('guest') === 'true') {
+    if (urlParams.has('guest') && urlParams.get('guest') === 'false') {
         // If guest=true, hide patient details
         hidePatientDetails();
     }
