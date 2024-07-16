@@ -1,0 +1,4 @@
+.cancel-page-grid
+{
+    grid-template-columns: auto 500px;
+}

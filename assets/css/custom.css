@@ -51,10 +51,13 @@
     max-width: 1190px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)
+{
     .page-height
     {
-        height: minmax(calc(100vh - 54.42px - 63px), fit-content);
+        min-height: calc(100vh - 80px - 63px);
+        height: fit-content;
+        max-height: 400vh;
     }
 }
   

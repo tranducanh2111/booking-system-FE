@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Appointment Cancellation</title>
+    <title>Clinic Client</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:locale" content="en_US">
@@ -14,21 +14,23 @@
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/custom.css">
-	<link rel="stylesheet" href="assets/css/popup.css">
-	<link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/cancel_page.css">
     <script>
         if (window.top != window.self) {
             window.top.location.replace(window.self.location.href);
         }
     </script>
 </head>
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
+<body>
+    <!-- Navigation -->
     <header class="w-100 bg-white sticky-top">
         <div class="max-w-body w-100 mx-auto d-flex p-4 flex-row justify-content-between align-items-center">
             <section class="d-flex align-items-center gap-2">
                 <figure class="w-auto h-100 max-w-sm-150 max-w-lg-310 mb-0">
                     <a href="index.html">
-                        <img src="/" alt="Logo" class="object-cover">
+                        <img src="/assets/media/logos/logo.png" alt="Logo" class="object-cover">
                     </a>
                 </figure>
                 <div class="ms-3 d-none d-md-inline">
@@ -53,55 +55,16 @@
         </div>
     </header>
     <!-- Page Body -->
-    <main class="max-w-body page-height mx-auto w-100 d-flex flex-column justify-content-start align-items-center gap-20 px-4 py-10 overflow-y-auto">
-        <form action="/assets/js/custom/cancel_appointment.js" name="Cancel Appointment">
-            <div class="row mb-10">
-                <h2 class="text-h2">Cancel an Appointment</h2>
+    <main class="max-w-body page-height d-flex align-items-center justify-content-center mx-auto w-100 px-4 py-10 overflow-y-auto">
+        <section class="d-flex flex-column justify-content-center align-items-center d-md-grid cancel-page-grid gap-20">
+            <figure class="d-flex align-items-center justify-content-center">
+                <img src="/assets/media/image/cancel-page-dog.png" alt="Adorable Dog" class="cover mw-75 mw-md-100">
+            </figure>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h2 class="text-h2 mb-8 text-center">Awww...We missed you already</h2>
+                <p class="text-body text-center">See you soon</p>
             </div>
-            <!-- Appointment Code, FName, LName, Cancel Reason -->
-            <div class="row mb-6 gap-sm-0 gap-4">
-                <!-- First Name -->
-                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
-                    <label for="fname" class="text-body">First Name</label>
-                    <input type="text" id="fname" name="fname" placeholder="First Name" class="text-body py-2 px-5 rounded-3">
-                </div>
-                <!-- Last Name -->
-                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
-                    <label for="lname" class="text-body">Last Name</label>
-                    <input type="text" id="lname" name="lname" placeholder="Last Name" class="text-body py-2 px-5 rounded-3">
-                </div>
-                <!-- Appointment Code -->
-                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
-                    <label for="apptcode" class="text-body">Appointment Code</label>
-                    <input type="text" id="apptcode" name="apptcode" placeholder="Appointment Code" class="text-body py-2 px-5 rounded-3">
-                </div>
-                <!-- Reason -->
-                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
-                    <label for="reason" class="text-body">Reason</label>
-                    <input type="text" id="reason" name="reason" placeholder="Reason" class="text-body py-2 px-5 rounded-3">
-                </div>
-            </div>
-            <!-- Reason Description -->
-            <div class="row mb-10">
-                <div class="col d-flex flex-column gap-2">
-                    <label for="description" class="text-body">We are so sorry about this, however, would you mind giving us a more detailed reason?</label>
-                    <textarea type="text" name="description" id="description" placeholder="Reason" class="text-body py-2 px-5 rounded-3" rows="5" style="min-height: 39px;"></textarea>
-                </div>
-            </div>
-            <!-- Button Container -->
-            <div class="row">
-                <!-- Submit Form -->
-                <div class="col">
-                    <button type="submit" class="bg-primary w-100 rounded-3 p-5 p-md-3 text-white text-body border-0">PROCEED</button>
-                </div>
-                <!-- Redirect to Homepage -->
-                <div class="col">
-                    <a href="/" class="col p-0">
-                        <button type="button" class="bg-red w-100 rounded-3 p-5 p-md-3 text-white text-body border-0">CANCEL</button>
-                    </a>
-                </div>
-            </div>
-        </form>
+        </section>
     </main>
     <!-- FOOTER -->
     <footer class="sticky-bottom w-100 bg-white">
@@ -121,7 +84,10 @@
             </div>
         </section>
     </footer>
-    <!-- Script -->
-    <script src="/assets/js/custom/cancel_appointment.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <script src="assets/js/custom/popup.js"></script>
+    <script src="assets/js/custom/guest_login.js"></script>
 </body>
 </html>
