@@ -43,6 +43,7 @@
         }
     </script>
     <div class="d-flex flex-column flex-root">
+        <!-- Navigation -->
         <header class="w-100 bg-white sticky-top">
 			<div class="max-w-body w-100 mx-auto d-flex p-4 flex-row justify-content-between align-items-center">
 				<section class="d-flex align-items-center gap-2">
@@ -72,6 +73,7 @@
 				</div>
 			</div>
         </header>
+        <!-- Page Body -->
         <main class="max-w-body page-height mx-auto w-100 d-flex flex-column justify-content-start align-items-center gap-20 px-4 py-10">
             <!-- Overlay and Pop-up HTML -->
 			<div id="overlay" class="overlay">
@@ -93,10 +95,10 @@
                     <span class="text-body text-white ms-2 ms-md-0 mb-0">Make Appointment</span>
                 </button>
                 <a href="cancel.html" class="col p-0">
-                    <div class="d-flex flex-column justify-content-center align-items-center p-3 border border-1 border-primary rounded-3">
+                    <button type="button" class="w-100 d-flex flex-column justify-content-center align-items-center p-3 border border-1 border-primary rounded-3">
                         <img src="/assets/media/svg/personal/cancel-appointment.svg" alt="Cancel Appointment Button" type="image/svg+xml" width="48" height="48">
-                        <p class="text-body text-primary ms-2 ms-md-0 mb-0">Cancel Appointment</p>
-                    </div>
+                        <span class="text-body text-primary ms-2 ms-md-0 mb-0">Cancel Appointment</span>
+                    </button>
                 </a>
             </section>
             <section class="overflow-auto-y">
