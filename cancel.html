@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Appointment Cancellation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Advance Notices">
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
+    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/popup.css">
+	<link rel="stylesheet" href="assets/css/user.css">
+    <script>
+        if (window.top != window.self) {
+            window.top.location.replace(window.self.location.href);
+        }
+    </script>
+</head>
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
+    <header class="w-100 bg-white sticky-top">
+        <div class="max-w-body w-100 mx-auto d-flex p-4 flex-row justify-content-between align-items-center">
+            <section class="d-flex align-items-center gap-2">
+                <figure class="w-auto h-100 max-w-sm-150 max-w-lg-310 mb-0">
+                    <a href="index.html">
+                        <img src="/assets/media/logos/logo.png" alt="Logo" class="object-cover">
+                    </a>
+                </figure>
+                <div class="ms-3 d-none d-md-inline">
+                    <h3 class="text-h3 text-primary mb-2">Cider House ICT</h3>
+                    <p class="text-body mb-0">9/899 Wellington Road ROWVILLE 3178 VIC</p>
+                </div>
+            </section>
+            <div class="w-auto d-flex flex-row flex-md-column align-items-center align-items-md-start gap-2">
+                <a href="tel:0466223888" class="link-primary">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="/assets/media/svg/personal/phone.svg" alt="Clinic Hotline" type="image/svg+xml" width="24" height="24">
+                        <p class="d-none d-md-inline w-auto mb-0">0466223888</p>
+                    </div>
+                </a>
+                <a href="mailto:at@ciderhouse.com.au" class="link-primary">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="/assets/media/svg/personal/email.svg" alt="Clinic Email" type="image/svg+xml" width="24" height="24">
+                        <p class="d-none d-md-inline w-auto mb-0">at@ciderhouse.com.au</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Page Body -->
+    <main class="max-w-body page-height mx-auto w-100 d-flex flex-column justify-content-start align-items-center gap-20 px-4 py-10">
+        <form action="/" name="Cancel Appointment">
+            <div class="row mb-10">
+                <h2 class="text-h2">Cancel an Appointment</h2>
+            </div>
+            <!-- Appointment Code, FName, LName, Cancel Reason -->
+            <div class="row mb-6 gap-sm-0 gap-4">
+                <!-- First Name -->
+                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
+                    <label for="fname" class="text-body">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" class="text-body py-2 px-5 rounded-3">
+                </div>
+                <!-- Last Name -->
+                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
+                    <label for="lname" class="text-body">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" class="text-body py-2 px-5 rounded-3">
+                </div>
+                <!-- Appointment Code -->
+                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
+                    <label for="apptcode" class="text-body">Appointment Code</label>
+                    <input type="text" id="apptcode" name="apptcode" placeholder="Appointment Code" class="text-body py-2 px-5 rounded-3">
+                </div>
+                <!-- Reason -->
+                <div class="col-sm-6 col-md-3 d-flex flex-column gap-2">
+                    <label for="reason" class="text-body">Reason</label>
+                    <input type="text" id="reason" name="reason" placeholder="Reason" class="text-body py-2 px-5 rounded-3">
+                </div>
+            </div>
+            <!-- Reason Description -->
+            <div class="row mb-10">
+                <div class="col d-flex flex-column gap-2">
+                    <label for="description" class="text-body">We are so sorry about this, however, would you mind giving us a more detailed reason?</label>
+                    <textarea type="text" name="description" id="description" placeholder="Reason" class="text-body py-2 px-5 rounded-3" rows="5" style="min-height: 39px;"></textarea>
+                </div>
+            </div>
+            <!-- Button Container -->
+            <div class="row">
+                <!-- Submit Form -->
+                <div class="col">
+                    <button type="submit" class="bg-primary w-100 rounded-3 p-5 text-white text-body border-0">Proceed</button>
+                </div>
+                <!-- Redirect to Homepage -->
+                <div class="col">
+                    <a href="/" class="col p-0">
+                        <button type="button" class="bg-red w-100 rounded-3 p-5 text-white text-body border-0">Cancel</button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </main>
+    <!-- FOOTER -->
+    <footer class="sticky-bottom w-100 bg-white">
+        <section class="max-w-body w-100 mx-auto d-flex flex-column flex-sm-row justify-content-between align-items-center px-4 p-4 gap-3">
+            <div>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/website-url.svg" alt="Clinic Website" type="image/svg+xml" width="32" height="32"></a>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/facebook.svg" alt="Facebook" type="image/svg+xml" width="32" height="32"></a>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/twitter.svg" alt="Twitter" type="image/svg+xml" width="32" height="32"></a>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/instagram.svg" alt="Instagram" type="image/svg+xml" width="32" height="32"></a>
+            </div>
+            <div>
+                <ul class="list-unstyled list-inline mb-0">
+                    <li class="list-inline-item"><a href="" class="text-primary fw-bolder link-primary">Advanced Notice</a></li>
+                    <li class="list-inline-item"><a href="" class="fw-bolder link-primary">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="" class="fw-bolder link-primary">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
