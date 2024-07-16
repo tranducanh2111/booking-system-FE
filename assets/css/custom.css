@@ -54,14 +54,14 @@
 @media (max-width: 768px) {
     .page-height
     {
-        height: calc(100vh - 54.42px - 63px);
+        height: minmax(calc(100vh - 54.42px - 63px), fit-content);
     }
 }
   
 @media (min-width: 768px) {
     .page-height
     {
-        height: calc(100vh - 88.9px - 63px);
+        height: calc(100vh - 85px - 63px);
     }
 }
 
