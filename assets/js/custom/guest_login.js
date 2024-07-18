@@ -1,6 +1,4 @@
-// guest_login.js
-
-// Function to hide all elements with class 'patient-detail'
+// Function to hide all elements with class 'patient-detail' (in case client logged in)
 function hidePatientDetails() {
     // Select all elements with class 'patient-detail'
     var patientDetails = document.querySelectorAll('.patient-detail');
@@ -11,7 +9,7 @@ function hidePatientDetails() {
     });
 }
 
-// Call the function when the document is ready
+// Call the function when the document is ready (check if client is logged in as guest)
 document.addEventListener('DOMContentLoaded', function() {
     // Check if 'guest=true' is in the URL query string
     var urlParams = new URLSearchParams(window.location.search);
@@ -20,3 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
         hidePatientDetails();
     }
 });
+
+
+// Handle URL parameters for logged in client
+function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+const addPatient = getParameterByName('addPatient');
+const clientName = getParameterByName('clientName');
+
+if (addPatient === 'true') {
+    document.querySelectorAll('.client-detail').forEach(element => {
+        element.style.display = 'none';
+    });
+
+    if (clientName) {
+        document.getElementById('greeting').innerText = `Welcome, ${clientName}!`;
+    }
+}
