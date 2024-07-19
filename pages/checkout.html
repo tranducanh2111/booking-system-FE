@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select Services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Advance Notices">
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
+    <link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/user.css">
+    <link rel="stylesheet" href="../assets/css/select_patient.css">
+    <script>
+        if (window.top != window.self) {
+            window.top.location.replace(window.self.location.href);
+        }
+    </script>
+    <style>
+        .card {
+            position: relative;
+            display: flex;
+            width: 395px;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #A3D063;
+            background-clip: border-box;
+            border: 1px solid #A3D063;
+            border-radius: 7px;
+        }
+          
+        .light {
+            color: #7d7979;
+            font-size: 11px;
+        }
+
+        .credit-card-input {
+            padding: 0;
+            border: none;
+            background: transparent;
+            margin-right: 4px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="w-100 bg-white sticky-top">
+        <div class="max-w-body w-100 mx-auto d-flex p-4 flex-row justify-content-between align-items-center">
+            <section class="d-flex align-items-center gap-2">
+                <figure class="w-auto h-100 max-w-sm-150 max-w-lg-310 mb-0">
+                    <a href="/">
+                        <img src="/assets/media/logos/logo.png" alt="Logo" class="object-cover">
+                    </a>
+                </figure>
+                <div class="ms-3 d-none d-md-inline">
+                    <h3 class="text-h3 text-primary mb-2">Cider House ICT</h3>
+                    <p class="text-body mb-0">9/899 Wellington Road ROWVILLE 3178 VIC</p>
+                </div>
+            </section>
+            <div class="w-auto d-flex flex-row flex-md-column align-items-center align-items-md-start gap-2">
+                <a href="tel:0466223888" class="link-primary">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="/assets/media/svg/personal/phone.svg" alt="Clinic Hotline" type="image/svg+xml" width="24" height="24">
+                        <p class="d-none d-md-inline w-auto mb-0">0466223888</p>
+                    </div>
+                </a>
+                <a href="mailto:at@ciderhouse.com.au" class="link-primary">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="/assets/media/svg/personal/email.svg" alt="Clinic Email" type="image/svg+xml" width="24" height="24">
+                        <p class="d-none d-md-inline w-auto mb-0">at@ciderhouse.com.au</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Page Body -->
+    <main class="page-height overflow-y-auto">
+        <section class="max-w-body w-100 mx-auto d-flex flex-column justify-content-start gap-20 px-4 py-10">
+            <!-- Credit Card -->
+            <div class="d-flex justify-content-center container text-white">
+                <div class="card px-10 py-5">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <img src="/assets/media/svg/personal/anz.svg" width="64">
+                        <img src="/assets/media/svg/personal/visa.svg" width="64" alt="Visa Icon">
+                    </div>
+                    <div class="mt-10 text-body">
+                        <span class="light text-body text-white fw-bold">Card Number</span>
+                        <div>
+                            <input type="text" class="credit-card-input" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 36px;">
+                            <input type="text" class="credit-card-input" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 36px;">
+                            <input type="text" class="credit-card-input" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 36px;">
+                            <input type="text" class="credit-card-input" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 36px;">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between card-details mt-3 mb-3">
+                        <div class="d-flex flex-column">
+                            <span class="light text-body text-white fw-bold">Card Holder</span>
+                            <input id="client-name" type="text" class="credit-card-input text-body" title="Client Name" placeholder="John Doe" style="width: 160px;">
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="d-flex flex-column me-3">
+                                <span class="light text-white text-body fw-bold">Expired</span>
+                                <div class="d-inline-flex justify-content-between text-body">
+                                    <input type="text" class="credit-card-input" maxlength="2" pattern="\d{2}" title="2 digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" placeholder="00" style="width: 18px;">/<input type="text" class="credit-card-input" maxlength="2" pattern="\d{2}" title="2 digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" placeholder="00" style="width: 18px;">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span class="light text-white text-body fw-bold">CVV</span>
+                                <input type="text" class="credit-card-input text-body" maxlength="3" pattern="\d{3}" title="3 digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3)" placeholder="000" style="width: 36px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="sticky-bottom w-100 bg-white">
+        <section class="max-w-body w-100 mx-auto d-flex flex-column flex-sm-row justify-content-between align-items-center px-4 p-4 gap-3">
+            <div>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/website-url.svg" alt="Clinic Website" type="image/svg+xml" width="32" height="32"></a>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/facebook.svg" alt="Facebook" type="image/svg+xml" width="32" height="32"></a>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/twitter.svg" alt="Twitter" type="image/svg+xml" width="32" height="32"></a>
+                <a href="https://ciderhouse.com.au/" target="_blank"><img src="/assets/media/svg/personal/instagram.svg" alt="Instagram" type="image/svg+xml" width="32" height="32"></a>
+            </div>
+            <div>
+                <ul class="list-unstyled list-inline mb-0">
+                    <li class="list-inline-item"><a href="" class="text-primary fw-bolder link-primary">Advanced Notice</a></li>
+                    <li class="list-inline-item"><a href="" class="fw-bolder link-primary">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="" class="fw-bolder link-primary">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <!-- JavaScript -->
+    <script src="../assets/plugins/global/plugins.bundle.js"></script>
+    <script src="../assets/js/scripts.bundle.js"></script>
+</body>
+</html>
