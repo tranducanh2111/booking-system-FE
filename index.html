@@ -71,22 +71,22 @@
 			<!-- Page Body -->
 			<main class="max-w-body page-height mx-auto w-100 d-flex flex-column justify-content-start align-items-center gap-20 px-4 py-10">
 				<!-- Button Container -->
-				<section class="row w-100 gap-3">
-					<!-- Make Appointment -->
-					<a href="booking.html" class="col p-0">
-						<div class="d-flex flex-row flex-md-column justify-content-center align-items-center p-3 bg-primary border border-1 border-primary rounded-3">
-							<object data="/assets/media/svg/personal/create-appointment.svg" type="image/svg+xml" width="48" height="48"></object>
-							<p class="text-body text-white ms-2 ms-md-0 mb-0">Make Appointment</p>
-						</div>
-					</a>
-					<!-- Cancel Appointment -->
-					<a href="cancel.html" class="col p-0">
-						<div class="d-flex flex-row flex-md-column justify-content-center align-items-center p-3 border border-1 border-primary rounded-3">
-							<object data="/assets/media/svg/personal/cancel-appointment.svg" type="image/svg+xml" width="48" height="48"></object>
-							<p class="text-body text-primary ms-2 ms-md-0 mb-0">Cancel Appointment</p>
-						</div>
-					</a>
-				</section>
+                <section class="row row-cols-1 row-cols-sm-2 w-100">
+                    <div class="col mb-3 mb-sm-0">
+                        <button type="button" class="w-100 d-flex flex-row flex-sm-column justify-content-center align-items-center p-3 bg-primary border border-1 border-primary rounded-3">
+                            <img src="/assets/media/svg/personal/create-appointment.svg" alt="Make Appointment Button" type="image/svg+xml" width="48" height="48">
+                            <span class="text-body text-white mt-0 mt-sm-2 ms-3 ms-sm-0 mb-0">Make Appointment</span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <a href="cancel.html" class="d-block text-decoration-none">
+                            <button type="button" class="w-100 d-flex flex-row flex-sm-column justify-content-center align-items-center p-3 border border-1 border-primary rounded-3">
+                                <img src="/assets/media/svg/personal/cancel-appointment.svg" alt="Cancel Appointment Button" type="image/svg+xml" width="48" height="48">
+                                <span class="text-body text-primary mt-0 mt-sm-2 ms-3 ms-sm-0 mb-0">Cancel Appointment</span>
+                            </button>
+                        </a>
+                    </div>
+                </section>
 				<!-- Clinic Note Section -->
 				<section class="overflow-auto-y">
 					<p class="text-body">Dear Valued Clients,
