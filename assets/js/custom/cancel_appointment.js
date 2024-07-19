@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Perform any form validation here if needed
 
         // Redirect to cancel_confirmation.html
-        window.location.href = '/cancel_confirmation.html';
+        window.location.href = '/pages/cancel_confirmation.html';
     });
 });

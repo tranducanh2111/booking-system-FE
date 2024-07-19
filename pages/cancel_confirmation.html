@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Select Services</title>
+    <title>Clinic Client</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:locale" content="en_US">
@@ -9,13 +9,13 @@
     <meta property="og:title" content="Advance Notices">
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
-    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/user.css">
-    <link rel="stylesheet" href="assets/css/select_patient.css">
+    <link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/user.css">
     <script>
         if (window.top != window.self) {
             window.top.location.replace(window.self.location.href);
@@ -28,7 +28,7 @@
         <div class="max-w-body w-100 mx-auto d-flex p-4 flex-row justify-content-between align-items-center">
             <section class="d-flex align-items-center gap-2">
                 <figure class="w-auto h-100 max-w-sm-150 max-w-lg-310 mb-0">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="/assets/media/logos/logo.png" alt="Logo" class="object-cover">
                     </a>
                 </figure>
@@ -54,42 +54,15 @@
         </div>
     </header>
     <!-- Page Body -->
-    <main class="max-w-body page-height mx-auto w-100 d-flex flex-column justify-content-start gap-20 px-4 py-10">
-        <h3 class="text-h3 text-gray-400">Welcome, Aaron!</h3>
-        <!-- Patient Selection Container -->
-        <section class="patient-detail">
-            <h2 class="text-h2 mb-10">Selected patient</h2>
-            <!-- Patient Detail -->
-            <article class="w-100 p-8 bg-white shadow-sm rounded-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
-                <div class="w-100 w-sm-auto d-sm-block d-flex justify-content-between align-items-center flex-grow-1">
-                    <h3 class="text-h3 line-clamp-1 mb-0 mb-sm-3">Abby</h3>
-                    <span class="d-inline-flex align-items-center">
-                        <img src="/assets/media/svg/personal/birthday.svg" alt="Birthday">
-                        <p class="text-body mb-0 ms-2">21/10/2021</p>
-                    </span>
-                </div>
-                <div class="w-100 w-sm-auto d-flex flex-column flex-shrink-0 mw-sm-75 gap-3">
-                    <span class="d-inline-flex align-items-center">
-                        <img src="/assets/media/svg/personal/species.svg" alt="Species">
-                        <p class="text-body mb-0 ms-2">Canine</p>
-                    </span>
-                    <span class="d-inline-flex align-items-center">
-                        <img src="/assets/media/svg/personal/breed.svg" alt="Breed">
-                        <p class="text-body mb-0 ms-2 line-clamp-1">Basset - Fauve de Bretagne (Basset - Fawn Brittany)</p>
-                    </span>
-                </div>
-            </article>
-        </section>
-        <!-- Choose Service -->
-        <section class="service-option d-flex flex-column flex-md-row gap-10">
-            <h2 class="text-h2" style="width: fit-content;">Select a service</h2>
-            <select name="service" id="service" class="flex-grow-1 text-body py-3 px-5 rounded-3 border-2" style="height: 41px;">
-                <option value=""></option>
-                <option value="Consult" class="text-body">Consult</option>
-                <option value="Surgery" class="text-body">Surgery</option>
-                <option value="Grooming" class="text-body">Grooming</option>
-                <option value="Vaccination" class="text-body">Vaccination</option>
-            </select>
+    <main class="max-w-body page-height d-flex flex-column align-items-center justify-content-center mx-auto w-100 px-4 py-4 overflow-y-auto">
+        <section class="mt-10 mt-md-0 d-flex flex-column justify-content-center align-items-center d-md-grid gap-10" style="grid-template-columns: auto 500px;">
+            <figure class="d-flex align-items-center justify-content-center mb-0">
+                <img src="/assets/media/image/cancel-page-dog.png" loading="lazy" alt="Adorable Dog" class="img-fluid" style="max-height: 50vh;">
+            </figure>
+            <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                <h2 class="text-h2 mb-2">Awww...We missed you already</h2>
+                <p class="text-body">See you soon</p>
+            </div>
         </section>
     </main>
     <!-- FOOTER -->
@@ -113,5 +86,7 @@
     <!-- JavaScript -->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>
+    <script src="assets/js/custom/popup.js"></script>
+    <script src="assets/js/custom/guest_login.js"></script>
 </body>
 </html>
