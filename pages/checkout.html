@@ -20,6 +20,12 @@
         if (window.top != window.self) {
             window.top.location.replace(window.self.location.href);
         }
+
+        function moveToNext(current, nextFieldID) {
+            if (current.value.length >= current.maxLength) {
+                document.getElementById(nextFieldID).focus();
+            }
+        }
     </script>
 </head>
 <body>
@@ -150,41 +156,127 @@
                         </span>
                     </article>
                     <!-- Credit Card -->
-                    <section class="d-flex flex-column text-break bg-primary rounded-3 border border-1 border-primary mx-auto mx-md-0 px-10 py-5" style="max-width: 395px; height: 214.5px;">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <img src="/assets/media/svg/personal/anz.svg" height="32">
-                            <img src="/assets/media/svg/personal/visa.svg" height="16" alt="Visa Icon">
-                        </div>
-                        <div class="mt-10 text-body">
-                            <span class=" text-body text-white fw-bold">Card Number</span>
-                            <div>
-                                <input type="text" class="p-0 border-0 bg-transparent me-1 outline-none text-body" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 37px;">
-                                <input type="text" class="p-0 border-0 bg-transparent me-1 outline-none text-body" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 37px;">
-                                <input type="text" class="p-0 border-0 bg-transparent me-1 outline-none text-body" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 37px;">
-                                <input type="text" class="p-0 border-0 bg-transparent me-1 outline-none text-body" maxlength="4" pattern="\d{4}" title="Four digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" placeholder="0000" style="width: 37px;">
+                    <form action="">
+                        <section class="d-flex flex-column justify-content-center align-items-center text-break bg-primary rounded-3 border border-1 border-primary mx-auto mx-md-0 px-10 py-5 mb-5" style="aspect-ratio: 395/214.5; max-width: 450px; width: 100%">
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <img src="/assets/media/svg/personal/anz.svg" height="32">
+                                <img src="/assets/media/svg/personal/visa.svg" height="16" alt="Visa Icon">
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-between card-details mt-3 mb-3">
-                            <div class="d-flex flex-column">
-                                <span class=" text-body text-white fw-bold">Card Holder</span>
-                                <input id="client-name" type="text" class="p-0 border-0 bg-transparent me-2 outline-none text-body" title="Client Name" placeholder="John Doe" style="width: 160px;">
+                            <div class="w-100 mt-10 text-body">
+                                <span class="text-body text-white fw-bold">Card Number</span>
+                                <div>
+                                    <!-- Card Number Block 1 -->
+                                    <input
+                                        type="text"
+                                        id="card-number1"
+                                        class="p-0 border-0 bg-transparent me-1 outline-none text-body"
+                                        maxlength="4"
+                                        pattern="\d{4}"
+                                        title="Four digits number"
+                                        oninput="moveToNext(this, 'card-number2')"
+                                        placeholder="0000"
+                                        style="width: 37px;"
+                                        required
+                                    >
+                                    <!-- Card Number Block 2 -->
+                                    <input
+                                        type="text"
+                                        id="card-number2"
+                                        class="p-0 border-0 bg-transparent me-1 outline-none text-body"
+                                        maxlength="4"
+                                        pattern="\d{4}"
+                                        title="Four digits number"
+                                        oninput="moveToNext(this, 'card-number3')"
+                                        placeholder="0000"
+                                        style="width: 37px;"
+                                        required
+                                    >
+                                    <!-- Card Number Block 3 -->
+                                    <input
+                                        type="text"
+                                        id="card-number3"
+                                        class="p-0 border-0 bg-transparent me-1 outline-none text-body"
+                                        maxlength="4"
+                                        pattern="\d{4}"
+                                        title="Four digits number"
+                                        oninput="moveToNext(this, 'card-number4')"
+                                        placeholder="0000"
+                                        style="width: 37px;"
+                                        required
+                                    >
+                                    <!-- Card Number Block 4 -->
+                                    <input
+                                        type="text"
+                                        id="card-number4"
+                                        class="p-0 border-0 bg-transparent me-1 outline-none text-body"
+                                        maxlength="4"
+                                        pattern="\d{4}"
+                                        title="Four digits number"
+                                        oninput="moveToNext(this, 'card-holder')"
+                                        placeholder="0000"
+                                        style="width: 37px;"
+                                        required
+                                    >
+                                </div>
                             </div>
-                            <div class="d-flex flex-row">
-                                <div class="d-flex flex-column me-3">
-                                    <span class=" text-white text-body fw-bold">Expired</span>
-                                    <div class="d-inline-flex justify-content-between text-body">
-                                        <input type="text" class="p-0 border-0 bg-transparent me-2 outline-none text-body" maxlength="2" pattern="\d{2}" title="2 digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" placeholder="00" style="width: 18px;">
-                                        /
-                                        <input type="text" class="p-0 border-0 bg-transparent me-2 outline-none text-body" maxlength="2" pattern="\d{2}" title="2 digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" placeholder="00" style="width: 18px;">
+                            <div class="w-100 d-flex justify-content-between card-details mt-3 mb-3">
+                                <div class="d-flex flex-column">
+                                    <span class=" text-body text-white fw-bold">Card Holder</span>
+                                    <input
+                                        type="text"
+                                        id="card-holder"
+                                        class="p-0 border-0 bg-transparent me-2 outline-none text-body"
+                                        title="Client Name"
+                                        placeholder="John Doe"
+                                        style="width: 160px;"
+                                    >
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column me-3">
+                                        <span class=" text-white text-body fw-bold">Expired</span>
+                                        <div class="d-inline-flex justify-content-between text-body">
+                                            <input
+                                                type="text"
+                                                id="card-expiry-month"
+                                                class="p-0 border-0 bg-transparent outline-none text-body"
+                                                maxlength="2"
+                                                pattern="\d{2}"
+                                                title="2 digits number"
+                                                oninput="moveToNext(this, 'card-expiry-year')"
+                                                placeholder="00"
+                                                style="width: 18px;"
+                                            >
+                                            /
+                                            <input
+                                                type="text"
+                                                id="card-expiry-year"
+                                                class="p-0 border-0 bg-transparent me-2 outline-none text-body"
+                                                maxlength="2"
+                                                pattern="\d{2}"
+                                                oninput="moveToNext(this, 'card-cvv')"
+                                                placeholder="00"
+                                                style="width: 18px;"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class=" text-white text-body fw-bold">CVV</span>
+                                        <input
+                                            type="text"
+                                            id="card-cvv"
+                                            class="p-0 border-0 bg-transparent me-2 outline-none text-body"
+                                            maxlength="3"
+                                            pattern="\d{3}"
+                                            title="3 digits number"
+                                            placeholder="000"
+                                            style="width: 36px;"
+                                        >
                                     </div>
                                 </div>
-                                <div class="d-flex flex-column">
-                                    <span class=" text-white text-body fw-bold">CVV</span>
-                                    <input type="text" class="p-0 border-0 bg-transparent me-2 outline-none text-body" maxlength="3" pattern="\d{3}" title="3 digits number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3)" placeholder="000" style="width: 36px;">
-                                </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                        <button class="w-100 px-3 py-2 rounded-3 text-body text-primary border-primary">CHECK OUT</button>
+                    </form>
                 </aside>
             </section>
         </section>
