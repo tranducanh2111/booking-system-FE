@@ -2,7 +2,7 @@
 var overlay = document.getElementById("overlay");
 
 // Get the button that opens the modal
-var btn = document.querySelector("#client_form");
+var btn = document.querySelector("#openPopup");
 
 // Get the cancel button inside the popup
 var cancelBtn = document.querySelector("#cancelBtn");

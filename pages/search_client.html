@@ -55,6 +55,18 @@
     </header>
     <!-- Page Body -->
     <main class="page-height overflow-y-auto">
+        <!-- Overlay and Pop-up HTML -->
+        <div id="overlay" class="overlay">
+            <div class="popup rounded-3">
+                <h3 class="text-center text-h3 text-primary mb-10">Wait, seems like we met before! Is that you?</h3>
+                <div class="d-flex flex-wrap flex-column flex-md-row justify-content-between gap-5">
+                    <!-- Sign In -->
+                    <button type="button" id="confirm" class="w-100 text-body fw-bolder text-white bg-user-primary rounded-3 px-5 py-2 border-1 border-primary">That&apos;s me!</button>
+                    <button type="button" id="cancelBtn" class="w-100 text-body fw-bolder text-primary rounded-3 border-primary px-5 py-2">No</button>
+                </div>
+                <!-- Add form or additional content here -->
+            </div>
+        </div>
         <section class="max-w-body mx-auto w-100 d-flex flex-column justify-content-start gap-10 px-4 py-10">
             <h3 class="text-h3 text-gray-400" id="greeting">Welcome, we hope you are doing well!</h3>
             <!-- Form: Retrieve Client Detail -->
@@ -140,7 +152,12 @@
                     </div>
                     <!-- Redirect to Homepage -->
                     <div class="col-12 col-md-6">
-                        <button type="reset" class="w-100 p-5 p-md-3 border border-1 border-primary text-body text-primary rounded-3">RESET</button>
+                        <button type="reset" class="w-100 p-5 p-md-3 bg-white border border-1 border-primary text-body text-primary rounded-3">RESET</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" id="openPopup" class="bg-primary w-100 rounded-3 p-5 p-md-3 text-white text-body border-0">Open Popup</button>
                     </div>
                 </div>
             </form>
@@ -168,5 +185,6 @@
     <script src="../assets/plugins/global/plugins.bundle.js"></script>
     <script src="../assets/js/scripts.bundle.js"></script>
     <script src="../assets/js/custom/guest_login.js"></script>
+    <script src="../assets/js/custom/fetch_current_client.js"></script>
 </body>
 </html>
