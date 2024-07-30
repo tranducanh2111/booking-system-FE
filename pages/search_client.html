@@ -67,100 +67,38 @@
                 <!-- Add form or additional content here -->
             </div>
         </div>
-        <section class="max-w-body mx-auto w-100 d-flex flex-column justify-content-start gap-10 px-4 py-10">
-            <h3 class="text-h3 text-gray-400" id="greeting">Welcome, we hope you are doing well!</h3>
-            <!-- Form: Retrieve Client Detail -->
-            <form action="/" name="Client Detail Form">
-                <h2 class="client-detail text-h2 mb-10">Client Detail</h2>
-                <!-- BEGIN: Client Detail -->
-                <div class="client-detail row gap-sm-0 gap-4 mb-6">
-                    <!-- Title -->
-                    <div class="col-sm-2 d-flex flex-column gap-2">
-                        <label for="title" class="text-body">Title</label>
-                        <input type="text" id="title" name="title" placeholder="Title" class="text-body py-2 px-5 rounded-3">
-                    </div>
-                    <!-- First Name -->
-                    <div class="col-sm-5 d-flex flex-column gap-2">
-                        <label for="fname" class="text-body">First Name</label>
-                        <input type="text" id="fname" name="fname" placeholder="First Name" class="text-body py-2 px-5 rounded-3">
-                    </div>
-                    <!-- Last Name -->
-                    <div class="col-sm-5 d-flex flex-column gap-2">
+        <section class="page-height position-relative d-flex justify-content-center align-items-center">
+            <figure class="h-100 w-100 position-absolute">
+                <img src="/assets/media/image/form-background.jpg" alt="Form Background" class="h-100 w-100 opacity-50 object-fit-cover">
+            </figure>
+            <section class="glassmorphism mx-auto w-100 d-flex flex-column justify-content-start gap-10 py-8 px-5" style="max-width: 420px;">
+                <!-- Form: Retrieve Client Detail -->
+                <form action="/" name="Client Detail Form">
+                    <h2 class="client-detail text-h2 mb-10 text-center">Client Detail</h2>
+                    <!-- BEGIN: Client Detail -->
+                    <div class="client-detail row gap-sm-0 gap-4 mb-6 w-100 mx-auto">
+                        <!-- Last Name -->
                         <label for="lname" class="text-body">Last Name</label>
                         <input type="text" id="lname" name="lname" placeholder="Last Name" class="text-body py-2 px-5 rounded-3">
                     </div>
-                </div>
-                <div class="client-detail row gap-sm-0 gap-4 mb-15">
-                    <!-- Email -->
-                    <div class="col-sm-6 d-flex flex-column gap-2">
+                    <div class="client-detail row gap-sm-0 gap-4 mb-6 w-100 mx-auto">
+                        <!-- Email -->
                         <label for="email" class="text-body">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email" class="text-body py-2 px-5 rounded-3">
                     </div>
-                    <!-- Mobile -->
-                    <div class="col-sm-6 d-flex flex-column gap-2">
-                        <label for="mobile" class="text-body">Mobile</label>
-                        <input type="number" id="mobile" name="mobile" placeholder="Mobile" class="text-body py-2 px-5 rounded-3">
-                    </div>
-                </div>
-                <!-- END: Client Detail -->
-                <!-- BEGIN: Patient Detail -->
-                <h2 class="patient-detail text-h2 mb-10">Patient Detail</h2>
-                <div class="patient-detail row gap-sm-0 gap-4 mb-10">
-                    <!-- Patient Name -->
-                    <div class=" col-sm-4 col-md-6 d-flex flex-column gap-2">
-                        <label for="patient-name" class="text-body">Patient Name</label>
-                        <input type="text" id="patient-name" name="patient-name" placeholder="Patient Name" class="text-body py-2 px-5 rounded-3">
-                    </div>
-                    <!-- Patient Date of Birth -->
-                    <div class="col-sm-4 col-md-3 d-flex flex-column gap-2">
-                        <label for="dob" class="text-body">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" class="text-body py-2 px-5 rounded-3">
-                    </div>
-                    <!-- Patient Gender -->
-                    <div class="col-sm-4 col-md-3 d-flex flex-column gap-2">
-                        <label for="gender" class="text-body">Gender</label>
-                        <select name="gender" id="gender" class="text-body py-3 px-5 rounded-3 border-2" style="height: 41px;">
-                            <option value="" class="text-body" disabled></option>
-                            <option value="Male" class="text-body">Male</option>
-                            <option value="Female" class="text-body">Female</option>
-                            <option value="Unknown" class="text-body">Unknown</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="patient-detail row gap-sm-0 gap-4 mb-10">
-                    <!-- Breed -->
-                    <div class="patient-detail col-sm-6 d-flex flex-column gap-2">
-                        <label for="breed" class="text-body">Breed</label>
-                        <select name="breed" id="breed" class="text-body py-3 px-5 rounded-3 border-2" style="height: 41px;">
-                            <option value="" class="text-body" disabled></option>
-                        </select>
-                    </div>
-                    <!-- Species -->
-                    <div class="col-sm-6 d-flex flex-column gap-2">
-                        <label for="species" class="text-body">Species</label>
-                        <select name="species" id="species" class="text-body py-3 px-5 rounded-3 border-2" style="height: 41px;">
-                            <option value="" class="text-body" disabled></option>
-                        </select>
-                    </div>
-                </div>
-                <!-- END: Patient Detail -->
-                <!-- Button Container -->
-                <div class="row">
-                    <!-- Submit Form -->
-                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <!-- END: Client Detail -->
+                    <!-- Button Container -->
+                    <div class="row w-100 mx-auto">
+                        <!-- Submit Form -->
                         <button type="submit" class="bg-primary w-100 rounded-3 p-5 p-md-3 text-white text-body border-0">NEXT</button>
                     </div>
-                    <!-- Redirect to Homepage -->
-                    <div class="col-12 col-md-6">
-                        <button type="reset" class="w-100 p-5 p-md-3 bg-white border border-1 border-primary text-body text-primary rounded-3">RESET</button>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" id="openPopup" class="mt-3 w-100 p-5 p-md-3 bg-white border border-1 border-primary text-body text-primary rounded-3">Open Popup</button>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <button type="button" id="openPopup" class="bg-primary w-100 rounded-3 p-5 p-md-3 text-white text-body border-0">Open Popup</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </section>
         </section>
     </main>
     <!-- FOOTER -->
